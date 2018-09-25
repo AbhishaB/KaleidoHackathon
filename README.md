@@ -3,6 +3,7 @@
 We have created a smart contract GovtContract.sol to track the transactions that an agency might do. The goal of this smart contract is to hold the said agency accountable and to introduce transparency into its working.
 
 The server is run on node.js using the command:
+
 ```node app.js```
 
 After it starts listening on port 3000, deploy the contract.
