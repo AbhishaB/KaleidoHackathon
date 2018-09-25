@@ -1,10 +1,18 @@
 # KaleidoHackathon
 
-We have created a smart contract GovtContract.sol to track the transactions that an agency might do. The goal of this smart contract is to hold the said agency accountable and to introduce transparency into its working.
+We have created a smart contract GovtContract.sol to track the transactions that an agency might do. The goal of this smart contract is to hold the said agency accountable and to introduce transparency into its working. The smart contract also catches any unauthorized spending or spending over the allocated budget by creating events and then creating a transaction containing the event on the blockchain.
+
+To run our smart contract navigate to a local working directory on your machine. Clone this repo and change into it:
+
+```git clone https://github.com/AbhishaB/KaleidoHackathon.git  && cd KaleidoHackathon```
+
+Install dependencies with ```npm install```
+
+Deploy a Kaleido environment using ```node setup.js PASTE_YOUR_APIKEY_HERE```
 
 The server is run on node.js using the command:
 
-```node app.js```
+```node govt_app.js```
 
 After it starts listening on port 3000, deploy the contract.
 
