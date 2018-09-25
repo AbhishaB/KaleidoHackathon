@@ -27,7 +27,8 @@ contract govtcontract {
         whitelist["ConstructionManager"]=true;
         whitelist["PowerTools"]=true;
     }
-
+    event SuccessfulTransaction(uint expend, uint dept, string purpose, string date, string time, uint location);
+      
     event NoBudget(uint amount, uint remainingBudget);
 
     event UnauthorizedSpending(string item, uint amount);
@@ -45,6 +46,7 @@ contract govtcontract {
         if (trx.expend <= rembudget) {
             if(whitelist[item]){
                 rembudget = rembudget - trx.expend;
+                emit SuccessfulTransaction(trx.expend, trx.dept, trx.purpose, trx.date, trx.time, trx.location);
             }
             else{
                 emit UnauthorizedSpending(trx.purpose, trx.expend);
