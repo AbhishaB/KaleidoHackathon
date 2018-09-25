@@ -8,6 +8,7 @@ The server is run on node.js using the command:
 After it starts listening on port 3000, deploy the contract.
 
 Our smart contract is first deployed using the command:
+
 ```curl -X POST -H "Content-Type: application/json" localhost:3000/govtcontract/deploy | jq```
 
 This initializes the initial budget allocated to be some value set in the contract's js file, GovtContract.js.
@@ -15,6 +16,7 @@ This initializes the initial budget allocated to be some value set in the contra
 The smart contracts records pertinent details of the transaction, such as amount of expenditure, department, purpose, date, time and location. These details are recorded on the blockchain.
 
 This is done using the command:
+
 ```curl -X POST -H "Content-Type: application/json" localhost:3000/govtcontract/set -d '{"value1":"5000","value2":"01","value3":"PowerTools","value4":"09/24/2018","value5":"03:27:00","value6":"27606"}' | jq```
 
 The value parameters are the aforementioned details of the transaction.
